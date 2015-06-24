@@ -1,0 +1,12 @@
+.grid0{
+	-fx-background-color: gray;
+}
+
+.grid1{
+	-fx-background-color: blue;
+}
+
+.title{
+	-fx-font-size: 15px;
+	-fx-font-weight:800;
+}

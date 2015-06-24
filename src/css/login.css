@@ -1,0 +1,16 @@
+.label{
+	-fx-font-size: 12px;
+	-fx-margin: 5px;
+}
+
+.grid{
+	-fx-padding: 20px 15px 20px 15px;
+}
+
+.prompt{
+	-fx-text-fill: red;
+}
+
+button{
+	-fx-cursor: pointer;
+}

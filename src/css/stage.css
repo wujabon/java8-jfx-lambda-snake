@@ -1,0 +1,52 @@
+.menu{
+	-fx-background-image:url(../image/snakeIcon.png);
+	-fx-border: none;
+	-fx-background-color:#000;
+	-fx-min-width:325px;
+	-fx-min-height:106px;
+}
+
+.start{
+	-fx-background-image:url(../image/start.png);
+	-fx-border: none;
+	-fx-background-color:#000;
+	-fx-min-width:325px;
+	-fx-min-height:46px;
+	-fx-cursor:hand;
+}
+
+.start:hover {
+	-fx-border-width: 2px;
+	-fx-border-color: #e4e4e4;
+	-fx-border-radius: 5px;
+}
+
+.exit{
+	-fx-background-image:url(../image/exit.png);
+	-fx-border: none;
+	-fx-background-color:#000;
+	-fx-min-width:325px;
+	-fx-min-height:46px;
+	-fx-cursor:hand;
+}
+
+.exit:hover {
+	-fx-border-width: 2px;
+	-fx-border-color: #e4e4e4;
+	-fx-border-radius: 5px;
+}
+
+.rank{
+	-fx-background-image:url(../image/rank.png);
+	-fx-border: none;
+	-fx-background-color:#000;
+	-fx-min-width:325px;
+	-fx-min-height:46px;
+	-fx-cursor:hand;
+}
+
+.rank:hover {
+	-fx-border-width: 2px;
+	-fx-border-color: #e4e4e4;
+	-fx-border-radius: 5px;
+}
