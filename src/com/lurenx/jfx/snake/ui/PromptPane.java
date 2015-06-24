@@ -1,4 +1,4 @@
-package com.teamtop.jfx.snake.ui;
+package com.lurenx.jfx.snake.ui;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -17,6 +17,10 @@ public class PromptPane {
 		this.prompt = prompt;
 	}
 
+	/**
+	 * Ã· æ≥°æ∞
+	 * @param primaryStage
+	 */
 	public void actionClose(Stage primaryStage){
 		if(promptStage != null) {
 			promptStage.show();

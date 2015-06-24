@@ -1,4 +1,4 @@
-package com.teamtop.jfx.snake.model;
+package com.lurenx.jfx.snake.model;
 
 public class User {
 	private long id;

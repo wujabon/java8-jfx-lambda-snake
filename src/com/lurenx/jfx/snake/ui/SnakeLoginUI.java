@@ -1,4 +1,4 @@
-package com.teamtop.jfx.snake.ui;
+package com.lurenx.jfx.snake.ui;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -23,7 +23,11 @@ public class SnakeLoginUI {
 		return snakeLoginUI;
 	}
 
-	public void loginOpen(Stage primaryStage) {
+	/**
+	 * 打开登陆面板
+	 * @param primaryStage
+	 */
+	public void openLoginPane(Stage primaryStage) {
 		if(loginStage != null) {
 			loginStage.show();
 			return;
@@ -91,13 +95,21 @@ public class SnakeLoginUI {
 		return root;
 	}
 
+	/**
+	 * 添加按钮监听
+	 * @param loginStage 登陆场景
+	 * @param primaryStage 主场景
+	 * @param registBtn 注册按钮
+	 * @param loginBtn 登陆按钮
+	 * @param promptLabel 提示字体
+	 */
 	private void addListener(final Stage loginStage, final Stage primaryStage,
 			Button registBtn, Button loginBtn, Label promptLabel) {
 		registBtn.setOnMouseClicked((event) -> {
 			MouseButton button = event.getButton();
 			if(MouseButton.PRIMARY.equals(button)){
 				loginStage.hide();
-				SnakeRegistUI.getIns().createRegistPane(primaryStage);
+				SnakeRegistUI.getIns().openRegistPane(primaryStage);
 			}
 		});
 		loginBtn.setOnMouseClicked(event ->{

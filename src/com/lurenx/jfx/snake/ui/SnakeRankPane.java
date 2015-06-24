@@ -1,4 +1,4 @@
-package com.teamtop.jfx.snake.ui;
+package com.lurenx.jfx.snake.ui;
 
 
 import java.util.Random;
@@ -6,7 +6,6 @@ import java.util.Random;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 /**
@@ -26,6 +25,10 @@ public class SnakeRankPane {
 		return snakeRankPane;
 	}
 
+	/**
+	 * 打开排名面板
+	 * @param primaryStage
+	 */
 	public void openRank(Stage primaryStage) {
 		rankStage = new Stage();
 		rankStage.setTitle("玩家排行");
@@ -35,6 +38,11 @@ public class SnakeRankPane {
 		rankStage.show();
 	}
 
+	/**
+	 * 初始化排名面板
+	 * @param primaryStage
+	 * @return
+	 */
 	private Scene initScene(Stage primaryStage) {
 		GridPane root = new GridPane();
 		Label num = new Label("名次");

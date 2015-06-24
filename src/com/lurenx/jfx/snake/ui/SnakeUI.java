@@ -1,4 +1,4 @@
-package com.teamtop.jfx.snake.ui;
+package com.lurenx.jfx.snake.ui;
 
 
 import java.util.LinkedList;
@@ -9,36 +9,23 @@ import java.util.concurrent.TimeUnit;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.beans.property.ObjectProperty;
-import javafx.event.EventDispatchChain;
-import javafx.event.EventHandler;
-import javafx.event.EventTarget;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseButton;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
-import com.teamtop.jfx.snake.model.Direction;
-import com.teamtop.jfx.snake.model.Food;
-import com.teamtop.jfx.snake.model.Location;
-import com.teamtop.jfx.snake.model.Snake;
-import com.teamtop.jfx.snake.model.User;
-import com.teamtop.jfx.snake.service.SnakeController;
+import com.lurenx.jfx.snake.model.Direction;
+import com.lurenx.jfx.snake.model.Food;
+import com.lurenx.jfx.snake.model.Location;
+import com.lurenx.jfx.snake.model.Snake;
+import com.lurenx.jfx.snake.service.SnakeController;
 
 public class SnakeUI extends Application {
 	public static final int WIDTH = 500;
@@ -50,7 +37,7 @@ public class SnakeUI extends Application {
 	
 	private ScheduledFuture future;
 	private ScheduledThreadPoolExecutor executor;
-	private User user;
+	//private User user;
 	private PromptPane closePane;
 	
 	private static int score = 0;
@@ -156,10 +143,10 @@ public class SnakeUI extends Application {
 			snakeStart();
 		});
 		login.setOnMouseClicked(event ->{
-			SnakeLoginUI.getIns().loginOpen(primaryStage);
+			SnakeLoginUI.getIns().openLoginPane(primaryStage);
 		});
 		register.setOnMouseClicked(event ->{
-			SnakeRegistUI.getIns().createRegistPane(primaryStage);
+			SnakeRegistUI.getIns().openRegistPane(primaryStage);
 		});
 		rank.setOnMouseClicked(event ->{
 			SnakeRankPane.getIns().openRank(primaryStage);

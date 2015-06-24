@@ -1,11 +1,11 @@
-package com.teamtop.jfx.snake.service;
+package com.lurenx.jfx.snake.service;
 
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.teamtop.jfx.snake.model.Direction;
-import com.teamtop.jfx.snake.model.Location;
-import com.teamtop.jfx.snake.model.Snake;
+import com.lurenx.jfx.snake.model.Direction;
+import com.lurenx.jfx.snake.model.Location;
+import com.lurenx.jfx.snake.model.Snake;
 
 public class SnakeController {
 	private Snake snake;
