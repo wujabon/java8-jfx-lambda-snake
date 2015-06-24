@@ -7,7 +7,11 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
-
+/**
+ * 关闭提醒类（可修改成工具类）
+ * @author wujabon
+ *
+ */
 public class PromptPane {
 	private Stage promptStage;
 	private String title;

@@ -6,7 +6,11 @@ import java.util.concurrent.atomic.AtomicLong;
 import com.lurenx.jfx.snake.model.Direction;
 import com.lurenx.jfx.snake.model.Location;
 import com.lurenx.jfx.snake.model.Snake;
-
+/**
+ * 贪吃蛇控制类
+ * @author wujabon
+ *
+ */
 public class SnakeController {
 	private Snake snake;
 	private static final int INIT_SIZE = 5;
@@ -26,6 +30,10 @@ public class SnakeController {
 		return snakeController;
 	}
 	
+	/**
+	 * 获取蛇
+	 * @return
+	 */
 	public Snake getSnake() {
 		if(snake == null) {
 			long id = ID_INCREMENT.getAndIncrement();
@@ -42,12 +50,23 @@ public class SnakeController {
 		return snake;
 	}
 
+	/**
+	 * 改变方向
+	 * @param direction
+	 */
 	public void changeDirection(Direction direction) {
 		if(snake != null) {
 			snake.setDirection(direction);
 		}
 	}
 	
+	/**
+	 * 计算位置
+	 * @param x
+	 * @param y
+	 * @param direction
+	 * @return
+	 */
 	public Location calNewLocation(int x, int y, Direction direction) {
 		switch(direction) {
 		case NORTH:

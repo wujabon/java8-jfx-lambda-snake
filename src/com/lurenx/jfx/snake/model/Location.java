@@ -1,5 +1,9 @@
 package com.lurenx.jfx.snake.model;
-
+/**
+ * Î»ÖÃ
+ * @author wujabon
+ *
+ */
 public class Location {
 	//x×ø±ê
 	private int posx;

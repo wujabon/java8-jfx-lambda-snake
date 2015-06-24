@@ -1,6 +1,10 @@
 package com.lurenx.jfx.snake.model;
 
-
+/**
+ * Ê³Îï
+ * @author wujabon
+ *
+ */
 public class Food {
 	private Location locaiton;
 	private int colorIndex;

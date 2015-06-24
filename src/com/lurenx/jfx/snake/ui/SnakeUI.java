@@ -26,7 +26,11 @@ import com.lurenx.jfx.snake.model.Food;
 import com.lurenx.jfx.snake.model.Location;
 import com.lurenx.jfx.snake.model.Snake;
 import com.lurenx.jfx.snake.service.SnakeController;
-
+/**
+ * primary pane
+ * @author Administrator
+ *
+ */
 public class SnakeUI extends Application {
 	public static final int WIDTH = 500;
 	public static final int HEIGTH = 350;
@@ -50,6 +54,10 @@ public class SnakeUI extends Application {
 		return food;
 	}
 
+	/**
+	 * 设置食物
+	 * @param inFood
+	 */
 	public static void setFood(Food inFood) {
 		int orgScore = 0;
 		if(food == null || food.getScore() == 0) {
@@ -78,6 +86,9 @@ public class SnakeUI extends Application {
 		
 	}
 	
+	/**
+	 * 开始跑蛇
+	 */
 	private void snakeStart() {
 		initSnake();
 		Canvas canvas = new Canvas(WIDTH, HEIGTH);
@@ -95,6 +106,9 @@ public class SnakeUI extends Application {
 		timer();
 	}
 
+	/**
+	 * 添加各类图标
+	 */
 	private void addIcon() {
 		Group root = new Group();
 		Scene scene = new Scene(root, WIDTH, HEIGTH);
@@ -138,6 +152,14 @@ public class SnakeUI extends Application {
 		//button.setBackground(value);
 	}
 
+	/**
+	 * 设置监听
+	 * @param start
+	 * @param rank
+	 * @param exit
+	 * @param login
+	 * @param register
+	 */
 	private void setListener(Button start, Button rank, Button exit, Button login, Button register) {
 		start.setOnMouseClicked(event ->{
 			snakeStart();
@@ -156,15 +178,25 @@ public class SnakeUI extends Application {
 		});
 	}
 
+	/**
+	 * 退出
+	 */
 	private void close() {
 		closePane.actionClose(primaryStage);
 		//System.exit(0);
 	}
 
+	/**
+	 * 初始化蛇
+	 */
 	private void initSnake() {
 		snake = SnakeController.getIns().getSnake();
 	}
 
+	/**
+	 * 方向控制
+	 * @param code
+	 */
 	private void controller(KeyCode code) {
 		SnakeController snakeController = SnakeController.getIns();
 		Direction direction;

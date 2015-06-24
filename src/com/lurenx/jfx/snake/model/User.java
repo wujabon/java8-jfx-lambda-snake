@@ -1,5 +1,9 @@
 package com.lurenx.jfx.snake.model;
-
+/**
+ * ”√ªß
+ * @author wujabon
+ *
+ */
 public class User {
 	private long id;
 	private String username;

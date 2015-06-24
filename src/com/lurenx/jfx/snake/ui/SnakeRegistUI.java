@@ -10,7 +10,11 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
+/**
+ * register stage
+ * @author wujabon
+ *
+ */
 public class SnakeRegistUI {
 	private static SnakeRegistUI snakeRegistUI;
 	private Stage registStage;

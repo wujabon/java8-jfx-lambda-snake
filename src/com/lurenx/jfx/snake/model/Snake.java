@@ -1,7 +1,11 @@
 package com.lurenx.jfx.snake.model;
 
 import java.util.LinkedList;
-
+/**
+ * Éß
+ * @author wujabon
+ *
+ */
 public class Snake {
 	//id
 	private long id;
