@@ -91,7 +91,7 @@ public class SnakeRegistUI {
 		pane3.setLayoutY(175);
 		pane3.setHgap(5);
 		// pane3.getStyleClass().add("prompt");
-		Label promptLabel = new Label("用户名或密码错误");
+		Label promptLabel = new Label();
 		promptLabel.getStyleClass().add("prompt");
 		pane3.getChildren().add(promptLabel);
 		
