@@ -3,7 +3,7 @@
 	-fx-border: none;
 	-fx-background-color:#000;
 	-fx-min-width:325px;
-	-fx-min-height:106px;
+	-fx-min-height:80px;
 }
 
 .start{
@@ -46,6 +46,36 @@
 }
 
 .rank:hover {
+	-fx-border-width: 2px;
+	-fx-border-color: #e4e4e4;
+	-fx-border-radius: 5px;
+}
+
+.login{
+	-fx-background-image:url(../image/login.png);
+	-fx-border: none;
+	-fx-background-color:#000;
+	-fx-min-width:325px;
+	-fx-min-height:46px;
+	-fx-cursor:hand;
+}
+
+.login:hover {
+	-fx-border-width: 2px;
+	-fx-border-color: #e4e4e4;
+	-fx-border-radius: 5px;
+}
+
+.register{
+	-fx-background-image:url(../image/register.png);
+	-fx-border: none;
+	-fx-background-color:#000;
+	-fx-min-width:325px;
+	-fx-min-height:46px;
+	-fx-cursor:hand;
+}
+
+.register:hover {
 	-fx-border-width: 2px;
 	-fx-border-color: #e4e4e4;
 	-fx-border-radius: 5px;

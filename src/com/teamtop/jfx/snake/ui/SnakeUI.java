@@ -42,7 +42,7 @@ import com.teamtop.jfx.snake.service.SnakeController;
 
 public class SnakeUI extends Application {
 	public static final int WIDTH = 500;
-	public static final int HEIGTH = 300;
+	public static final int HEIGTH = 350;
 	private static GraphicsContext gc;
 	private static Snake snake;
 	
@@ -92,10 +92,6 @@ public class SnakeUI extends Application {
 	}
 	
 	private void snakeStart() {
-		if(user == null) {
-			SnakeLoginUI.getIns().loginOpen(primaryStage);
-			return;
-		}
 		initSnake();
 		Canvas canvas = new Canvas(WIDTH, HEIGTH);
 		Group root = new Group();
@@ -130,6 +126,14 @@ public class SnakeUI extends Application {
 		pane.getChildren().add(start);
 		start.getStyleClass().add("start");
 		
+		Button login = new Button();
+		pane.getChildren().add(login);
+		login.getStyleClass().add("login");
+		
+		Button register = new Button();
+		pane.getChildren().add(register);
+		register.getStyleClass().add("register");
+		
 		Button rank = new Button();
 		pane.getChildren().add(rank);
 		rank.getStyleClass().add("rank");
@@ -139,7 +143,7 @@ public class SnakeUI extends Application {
 		exit.getStyleClass().add("exit");
 		root.getChildren().add(pane);
 		
-		setListener(start, rank, exit);
+		setListener(start, rank, exit, login, register);
 		
 		primaryStage.setScene(scene);
 		
@@ -147,20 +151,20 @@ public class SnakeUI extends Application {
 		//button.setBackground(value);
 	}
 
-	private void setListener(Button start, Button rank, Button exit) {
+	private void setListener(Button start, Button rank, Button exit, Button login, Button register) {
 		start.setOnMouseClicked(event ->{
 			snakeStart();
+		});
+		login.setOnMouseClicked(event ->{
+			SnakeLoginUI.getIns().loginOpen(primaryStage);
+		});
+		register.setOnMouseClicked(event ->{
+			SnakeRegistUI.getIns().createRegistPane(primaryStage);
 		});
 		rank.setOnMouseClicked(event ->{
 			SnakeRankPane.getIns().openRank(primaryStage);
 		});
 		exit.setOnMouseClicked(event -> {
-			try {
-				this.stop();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			closePane.actionClose(primaryStage);
 		});
 	}
